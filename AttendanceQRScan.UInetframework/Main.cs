@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using AttendanceQRScan.BusinessLogic;
 using AttendanceQRScan.Helper;
 using AttendanceQRScan.Models;
@@ -39,6 +41,8 @@ namespace AttendanceQRScan.UInetframework
             lblEmpCountAttendance.Text = TotalNumberOfEmployees().ToString();
 
             LoadDepartmentForFiltering();
+
+            FillDepartmentChart();
         }
 
         private int TotalNumberOfEmployees()
@@ -144,5 +148,36 @@ namespace AttendanceQRScan.UInetframework
 
         #endregion
 
+        #region Department Configuration
+
+        int count;
+        private void FillDepartmentChart()
+        {
+            var deptEmpCount = depFuncs.NumOfEmployeesByDepartment();
+
+            foreach (var department in deptEmpCount)
+            {
+                if (department.Count > 0)
+                    departmentChart.Series[0].Points.AddXY(department.Department.Name, department.Count);
+            }
+        }
+
+        #endregion
+
+        private void departmentChart_PrePaint(object sender, System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs e)
+        {
+            if (e.ChartElement is ChartArea)
+            {
+                var ta = new TextAnnotation();
+                ta.Text = $"Total Employees\n{TotalNumberOfEmployees().ToString()}";
+                ta.Width = e.Position.Width;
+                ta.Height = e.Position.Height;
+                ta.X = e.Position.X;
+                ta.Y = e.Position.Y;
+                ta.Font = new Font("Century Gothic", 12, FontStyle.Regular);
+
+                departmentChart.Annotations.Add(ta);
+            }
+        }
     }
 }

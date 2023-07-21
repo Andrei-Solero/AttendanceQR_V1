@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.attendedPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -62,6 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.departmentChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -83,6 +87,8 @@
             this.onTimePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentChart)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -449,6 +455,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.departmentChart);
             this.tabPage3.ImageKey = "department.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 37);
             this.tabPage3.Name = "tabPage3";
@@ -456,6 +463,25 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Departments";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // departmentChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.departmentChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.departmentChart.Legends.Add(legend1);
+            this.departmentChart.Location = new System.Drawing.Point(50, 30);
+            this.departmentChart.Name = "departmentChart";
+            this.departmentChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.departmentChart.Series.Add(series1);
+            this.departmentChart.Size = new System.Drawing.Size(460, 381);
+            this.departmentChart.TabIndex = 0;
+            this.departmentChart.Text = "chart1";
+            this.departmentChart.PrePaint += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs>(this.departmentChart_PrePaint);
             // 
             // tabPage4
             // 
@@ -512,7 +538,7 @@
             this.guna2Elipse5.BorderRadius = 8;
             this.guna2Elipse5.TargetControl = this.attendedPanel;
             // 
-            // Main_New
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -527,7 +553,7 @@
             this.DrawerWidth = 300;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_48;
             this.MaximizeBox = false;
-            this.Name = "Main_New";
+            this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(0, 72, 0, 3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -551,6 +577,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.departmentChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -598,5 +626,6 @@
         private System.Windows.Forms.Timer realTimeAttendanceTimer;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private System.Windows.Forms.LinkLabel btnAttendanceClearFilter;
+        private System.Windows.Forms.DataVisualization.Charting.Chart departmentChart;
     }
 }
