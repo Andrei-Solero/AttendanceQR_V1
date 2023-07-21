@@ -16,14 +16,14 @@ using MaterialSkin.Controls;
 
 namespace AttendanceQRScan.UInetframework
 {
-    public partial class Main_New : MaterialForm
+    public partial class Main : MaterialForm
     {
         EmployeeFuncs empFuncs;
         DepartmentFuncs depFuncs;
         AttendanceFuncs attendanceFuncs;
         ImageTools imageTool;
 
-        public Main_New()
+        public Main()
         {
             InitializeComponent();
 
