@@ -30,9 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.attendedPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -65,6 +66,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.listDepartments = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.departmentChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -88,6 +94,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -456,6 +464,8 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.departmentChart);
+            this.tabPage3.Controls.Add(this.guna2Panel1);
+            this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.ImageKey = "department.png";
             this.tabPage3.Location = new System.Drawing.Point(4, 37);
             this.tabPage3.Name = "tabPage3";
@@ -464,24 +474,87 @@
             this.tabPage3.Text = "Departments";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.listDepartments);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 103);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
+            this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 5, 5);
+            this.guna2Panel1.Size = new System.Drawing.Size(486, 384);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // listDepartments
+            // 
+            this.listDepartments.AutoScroll = true;
+            this.listDepartments.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listDepartments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listDepartments.Location = new System.Drawing.Point(0, 0);
+            this.listDepartments.Name = "listDepartments";
+            this.listDepartments.Padding = new System.Windows.Forms.Padding(4);
+            this.listDepartments.Size = new System.Drawing.Size(486, 384);
+            this.listDepartments.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(81)))), ((int)(((byte)(181)))));
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(492, 100);
+            this.panel2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(21, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(319, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "View, Add and Modify all the departments configuration";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(17, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(392, 38);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Department Settings";
+            // 
             // departmentChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.departmentChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.departmentChart.Legends.Add(legend1);
-            this.departmentChart.Location = new System.Drawing.Point(50, 30);
+            this.departmentChart.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            chartArea3.Name = "ChartArea1";
+            this.departmentChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.departmentChart.Legends.Add(legend3);
+            this.departmentChart.Location = new System.Drawing.Point(495, 3);
             this.departmentChart.Name = "departmentChart";
             this.departmentChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.departmentChart.Series.Add(series1);
-            this.departmentChart.Size = new System.Drawing.Size(460, 381);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.departmentChart.Series.Add(series3);
+            this.departmentChart.Size = new System.Drawing.Size(508, 484);
             this.departmentChart.TabIndex = 0;
             this.departmentChart.Text = "chart1";
-            this.departmentChart.PrePaint += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ChartPaintEventArgs>(this.departmentChart_PrePaint);
+            title3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            title3.Name = "Organization View";
+            title3.Text = "Organization View";
+            title3.TextStyle = System.Windows.Forms.DataVisualization.Charting.TextStyle.Shadow;
+            this.departmentChart.Titles.Add(title3);
             // 
             // tabPage4
             // 
@@ -578,6 +651,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.departmentChart)).EndInit();
             this.ResumeLayout(false);
 
@@ -627,5 +703,10 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private System.Windows.Forms.LinkLabel btnAttendanceClearFilter;
         private System.Windows.Forms.DataVisualization.Charting.Chart departmentChart;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.FlowLayoutPanel listDepartments;
     }
 }

@@ -234,6 +234,12 @@
     <Compile Include="UserControls\AttendanceDetail.Designer.cs">
       <DependentUpon>AttendanceDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DepartmentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DepartmentDetails.Designer.cs">
+      <DependentUpon>DepartmentDetails.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GenerateDepartment.resx">
       <DependentUpon>GenerateDepartment.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +260,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\AttendanceDetail.resx">
       <DependentUpon>AttendanceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DepartmentDetails.resx">
+      <DependentUpon>DepartmentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

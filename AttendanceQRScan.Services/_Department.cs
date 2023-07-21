@@ -59,6 +59,8 @@ namespace AttendanceQRScan.Services
                     Department = new Department
                     {
                         Name = data["DepartmentName"].ToString(),
+                        WorkedHours_In = DateTime.Parse(data["Dept_WorkedHours_In"].ToString()),
+                        WorkedHours_Out = DateTime.Parse(data["Dept_WorkedHours_Out"].ToString()),
                     },
                     Count = int.Parse(data["NumberOfEmp"].ToString())            
                 });
