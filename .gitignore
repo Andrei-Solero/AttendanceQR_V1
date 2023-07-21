@@ -1,0 +1,15 @@
+# Ignore Visual Studio files
+*.suo
+*.user
+*.sln.docstates
+bin/
+obj/
+
+# Ignore SQL Server database files
+*.mdf
+*.ldf
+
+AttendanceQR.sql
+AttendanceQRDB*.bak
+
+/packages/
