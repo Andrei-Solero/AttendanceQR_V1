@@ -43,7 +43,7 @@ namespace AttendanceQRScan.UInetframework
             LoadDepartmentForFiltering();
 
             FillDepartmentChart();
-            LoadDepartments();
+            DepartmentsList();
         }
 
         private int TotalNumberOfEmployees()
@@ -153,7 +153,7 @@ namespace AttendanceQRScan.UInetframework
 
         private void FillDepartmentChart()
         {
-            var deptEmpCount = depFuncs.NumOfEmployeesByDepartment();
+            var deptEmpCount = depFuncs.DepartmentsWithEmployeeCount();
 
             foreach (var department in deptEmpCount)
             {
@@ -162,10 +162,14 @@ namespace AttendanceQRScan.UInetframework
             }
         }
 
-        private void LoadDepartments()
+        private void DepartmentsList()
         {
-            var departments = depFuncs.NumOfEmployeesByDepartment();
+            var departments = depFuncs.DepartmentsWithEmployeeCount();
+            LoadDepartmentsToList(departments);
+        }
 
+        private void LoadDepartmentsToList(IEnumerable<DepartmentCountEmployee> departments)
+        {
             DepartmentDetails depDetails;
             listDepartments.Controls.Clear();
             foreach (var department in departments)
@@ -175,6 +179,19 @@ namespace AttendanceQRScan.UInetframework
             }
         }
 
+        private void txtSearchDepartment_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSearchDepartment.Text))
+            {
+                var filteredDepartment = depFuncs.SearchDepartmentByName(txtSearchDepartment.Text);
+                LoadDepartmentsToList(filteredDepartment);
+            }
+            else
+                DepartmentsList();
+        }
+
         #endregion
+
+
     }
 }

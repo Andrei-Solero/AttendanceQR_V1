@@ -24,7 +24,13 @@ namespace AttendanceQRScan.BusinessLogic
             return departmentService.GetAll();
         }
 
-        public IEnumerable<DepartmentCountEmployee> NumOfEmployeesByDepartment()
+        public IEnumerable<DepartmentCountEmployee> SearchDepartmentByName(string departmentName)
+        {
+            Department dept = new Department { Name = departmentName };
+            return departmentService.GetDepartments(dept);
+        }
+
+        public IEnumerable<DepartmentCountEmployee> DepartmentsWithEmployeeCount()
         {
             return departmentService.GetNumOfEmployeesByDepartment();
         }

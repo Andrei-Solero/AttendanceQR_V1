@@ -41,7 +41,7 @@
             // 
             // lblDepartmentName
             // 
-            this.lblDepartmentName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartmentName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartmentName.Location = new System.Drawing.Point(3, 7);
             this.lblDepartmentName.Name = "lblDepartmentName";
             this.lblDepartmentName.Size = new System.Drawing.Size(249, 47);

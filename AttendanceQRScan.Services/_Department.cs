@@ -4,6 +4,7 @@ using AttendanceQRScan.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace AttendanceQRScan.Services
 {
@@ -42,6 +43,28 @@ namespace AttendanceQRScan.Services
             }
 
             return department;
+        }
+
+        public IEnumerable<DepartmentCountEmployee> GetDepartments(Department department)
+        {
+            var existingDepartments = GetNumOfEmployeesByDepartment();
+
+            var query = existingDepartments
+                .Where(deptName => deptName.Department.Name.Contains(department.Name))
+                .Select(deptName => new DepartmentCountEmployee
+                {
+                    Department = new Department
+                    {
+                        DepartmentID = deptName.Department.DepartmentID,
+                        Name = deptName.Department.Name,
+                        WorkedHours_In = deptName.Department.WorkedHours_In,
+                        WorkedHours_Out = deptName.Department.WorkedHours_Out,
+                    }
+                });
+
+            var filteredList = query.ToList();
+
+            return filteredList;
         }
 
         public IEnumerable<DepartmentCountEmployee> GetNumOfEmployeesByDepartment()
