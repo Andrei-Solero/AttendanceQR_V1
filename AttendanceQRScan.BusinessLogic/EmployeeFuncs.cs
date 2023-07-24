@@ -48,58 +48,16 @@ namespace AttendanceQRScan.BusinessLogic
             return employeeService.GetAll();
         }
 
-        public IEnumerable<Employee> FilterEmployeeByName(string searchQuery)
-        {
-            IEnumerable<Employee> employees = GetAllEmployees();
-
-            return from emp in employees
-                   where ($"{emp.FirstName.ToLower()} {emp.LastName.ToLower()}").Contains(searchQuery)
-                   select new Employee
-                   {
-                       EmployeeID = emp.EmployeeID,
-                       FirstName = emp.FirstName,
-                       MiddleName = emp.MiddleName,
-                       LastName = emp.LastName,
-                       ContactNumber = emp.ContactNumber,
-                       EmailAddress = emp.EmailAddress,
-                       HomeAddress = emp.HomeAddress,
-                       Department = new Department
-                       {
-                           DepartmentID = emp.Department.DepartmentID,
-                           Name = emp.Department.Name,
-                           WorkedHours_In = emp.Department.WorkedHours_In,
-                           WorkedHours_Out = emp.Department.WorkedHours_Out
-                       }
-                   };
-        }
-
         public IEnumerable<Employee> FilterEmployeeByDepartment(Department department)
         {
-            IEnumerable<Employee> employees = GetAllEmployees();
-
-            var query = from emp in employees
-                        where emp.Department.DepartmentID == department.DepartmentID
-                        select new Employee
-                        {
-                            EmployeeID = emp.EmployeeID,
-                            FirstName = emp.FirstName,
-                            MiddleName = emp.MiddleName,
-                            LastName = emp.LastName,
-                            ContactNumber = emp.ContactNumber,
-                            EmailAddress = emp.EmailAddress,
-                            HomeAddress = emp.HomeAddress,
-                            Department = new Department
-                            {
-                                DepartmentID = emp.Department.DepartmentID,
-                                Name = emp.Department.Name,
-                                WorkedHours_In = emp.Department.WorkedHours_In,
-                                WorkedHours_Out = emp.Department.WorkedHours_Out
-                            }
-                        };
-
-            var filteredList = query.ToList<Employee>();
-
-            return filteredList;
+            return employeeService.GetEmployeeByDepartment(department);
         }
+
+
+        public IEnumerable<Employee> FilterEmployeeByEmpName(string empNameSearchQuery)
+        {
+            return employeeService.GetEmployeeByEmployeeName(empNameSearchQuery);
+        }
+
     }
 }

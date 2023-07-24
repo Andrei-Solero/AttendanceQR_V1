@@ -66,6 +66,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearchDepartment = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.departmentCountPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.departmentChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.listDepartments = new System.Windows.Forms.FlowLayoutPanel();
@@ -73,6 +83,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lblEmployeeTotalCount = new System.Windows.Forms.Label();
+            this.empClearFilter = new System.Windows.Forms.LinkLabel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtEmpNameSearch = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbFilterEmployeeByDepartment = new System.Windows.Forms.ComboBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.listEmployees = new System.Windows.Forms.FlowLayoutPanel();
+            this.label16 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -81,17 +101,8 @@
             this.clock = new System.Windows.Forms.Timer(this.components);
             this.realTimeAttendanceTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.departmentCountPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtSearchDepartment = new System.Windows.Forms.TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.attendedPanel.SuspendLayout();
@@ -105,11 +116,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.departmentCountPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentChart)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.departmentCountPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -494,6 +508,143 @@
             this.tabPage3.Text = "Departments";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderRadius = 6;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.MediumVioletRed;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(769, 553);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Enabled = true;
+            this.guna2Button4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
+            this.guna2Button4.Size = new System.Drawing.Size(205, 60);
+            this.guna2Button4.TabIndex = 10;
+            this.guna2Button4.Text = "Archive Department";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.BorderColor = System.Drawing.Color.Navy;
+            this.guna2Button3.BorderRadius = 6;
+            this.guna2Button3.BorderThickness = 1;
+            this.guna2Button3.CustomBorderColor = System.Drawing.Color.MediumVioletRed;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.Navy;
+            this.guna2Button3.Location = new System.Drawing.Point(558, 553);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Enabled = true;
+            this.guna2Button3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
+            this.guna2Button3.Size = new System.Drawing.Size(205, 60);
+            this.guna2Button3.TabIndex = 9;
+            this.guna2Button3.Text = "Modify Department";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 6;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(347, 553);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Enabled = true;
+            this.guna2Button1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
+            this.guna2Button1.Size = new System.Drawing.Size(205, 60);
+            this.guna2Button1.TabIndex = 8;
+            this.guna2Button1.Text = "New Department";
+            // 
+            // txtSearchDepartment
+            // 
+            this.txtSearchDepartment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchDepartment.Location = new System.Drawing.Point(326, 108);
+            this.txtSearchDepartment.Name = "txtSearchDepartment";
+            this.txtSearchDepartment.Size = new System.Drawing.Size(163, 25);
+            this.txtSearchDepartment.TabIndex = 7;
+            this.txtSearchDepartment.TextChanged += new System.EventHandler(this.txtSearchDepartment_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(270, 116);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 17);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Search:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(9, 111);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(128, 25);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Departments";
+            // 
+            // departmentCountPanel
+            // 
+            this.departmentCountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(98)))));
+            this.departmentCountPanel.Controls.Add(this.label7);
+            this.departmentCountPanel.Controls.Add(this.label9);
+            this.departmentCountPanel.Controls.Add(this.pictureBox5);
+            this.departmentCountPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.departmentCountPanel.Location = new System.Drawing.Point(24, 539);
+            this.departmentCountPanel.Name = "departmentCountPanel";
+            this.departmentCountPanel.ShadowDecoration.Enabled = true;
+            this.departmentCountPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 5, 5);
+            this.departmentCountPanel.Size = new System.Drawing.Size(303, 89);
+            this.departmentCountPanel.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(91, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 45);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "0";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(91, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(176, 17);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Total Number of Departments";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(82, 64);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
             // departmentChart
             // 
             this.departmentChart.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -578,13 +729,133 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.lblEmployeeTotalCount);
+            this.tabPage4.Controls.Add(this.empClearFilter);
+            this.tabPage4.Controls.Add(this.pictureBox6);
+            this.tabPage4.Controls.Add(this.txtEmpNameSearch);
+            this.tabPage4.Controls.Add(this.label17);
+            this.tabPage4.Controls.Add(this.label18);
+            this.tabPage4.Controls.Add(this.cmbFilterEmployeeByDepartment);
+            this.tabPage4.Controls.Add(this.guna2Panel2);
+            this.tabPage4.Controls.Add(this.label16);
+            this.tabPage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage4.ImageKey = "employee(1).png";
             this.tabPage4.Location = new System.Drawing.Point(4, 37);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1072, 604);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Employees";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // lblEmployeeTotalCount
+            // 
+            this.lblEmployeeTotalCount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeTotalCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblEmployeeTotalCount.Location = new System.Drawing.Point(815, 13);
+            this.lblEmployeeTotalCount.Name = "lblEmployeeTotalCount";
+            this.lblEmployeeTotalCount.Size = new System.Drawing.Size(189, 21);
+            this.lblEmployeeTotalCount.TabIndex = 13;
+            this.lblEmployeeTotalCount.Text = "Total Employees: 0000";
+            this.lblEmployeeTotalCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // empClearFilter
+            // 
+            this.empClearFilter.AutoSize = true;
+            this.empClearFilter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empClearFilter.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.empClearFilter.Location = new System.Drawing.Point(934, 61);
+            this.empClearFilter.Name = "empClearFilter";
+            this.empClearFilter.Size = new System.Drawing.Size(70, 17);
+            this.empClearFilter.TabIndex = 12;
+            this.empClearFilter.TabStop = true;
+            this.empClearFilter.Text = "Clear Filter";
+            this.empClearFilter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.empClearFilter_LinkClicked);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(13, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(106, 80);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
+            // txtEmpNameSearch
+            // 
+            this.txtEmpNameSearch.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpNameSearch.Location = new System.Drawing.Point(842, 37);
+            this.txtEmpNameSearch.Name = "txtEmpNameSearch";
+            this.txtEmpNameSearch.Size = new System.Drawing.Size(162, 21);
+            this.txtEmpNameSearch.TabIndex = 10;
+            this.txtEmpNameSearch.TextChanged += new System.EventHandler(this.txtEmpNameSearch_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label17.Location = new System.Drawing.Point(740, 40);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(96, 13);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Search Employee:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label18.Location = new System.Drawing.Point(506, 40);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(107, 13);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Sort by Department";
+            // 
+            // cmbFilterEmployeeByDepartment
+            // 
+            this.cmbFilterEmployeeByDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilterEmployeeByDepartment.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFilterEmployeeByDepartment.FormattingEnabled = true;
+            this.cmbFilterEmployeeByDepartment.Location = new System.Drawing.Point(613, 37);
+            this.cmbFilterEmployeeByDepartment.Name = "cmbFilterEmployeeByDepartment";
+            this.cmbFilterEmployeeByDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cmbFilterEmployeeByDepartment.TabIndex = 7;
+            this.cmbFilterEmployeeByDepartment.SelectedValueChanged += new System.EventHandler(this.cmbFilterEmployee_SelectedValueChanged);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.listEmployees);
+            this.guna2Panel2.Location = new System.Drawing.Point(13, 86);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Enabled = true;
+            this.guna2Panel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 3, 5);
+            this.guna2Panel2.Size = new System.Drawing.Size(991, 522);
+            this.guna2Panel2.TabIndex = 2;
+            // 
+            // listEmployees
+            // 
+            this.listEmployees.AutoScroll = true;
+            this.listEmployees.AutoSize = true;
+            this.listEmployees.BackColor = System.Drawing.Color.White;
+            this.listEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listEmployees.Location = new System.Drawing.Point(0, 0);
+            this.listEmployees.Name = "listEmployees";
+            this.listEmployees.Padding = new System.Windows.Forms.Padding(5);
+            this.listEmployees.Size = new System.Drawing.Size(991, 522);
+            this.listEmployees.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(125, 32);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(125, 23);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Employees";
             // 
             // imageList1
             // 
@@ -631,144 +902,24 @@
             this.guna2Elipse5.BorderRadius = 8;
             this.guna2Elipse5.TargetControl = this.attendedPanel;
             // 
-            // departmentCountPanel
-            // 
-            this.departmentCountPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(89)))), ((int)(((byte)(98)))));
-            this.departmentCountPanel.Controls.Add(this.label7);
-            this.departmentCountPanel.Controls.Add(this.label9);
-            this.departmentCountPanel.Controls.Add(this.pictureBox5);
-            this.departmentCountPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.departmentCountPanel.Location = new System.Drawing.Point(24, 539);
-            this.departmentCountPanel.Name = "departmentCountPanel";
-            this.departmentCountPanel.ShadowDecoration.Enabled = true;
-            this.departmentCountPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 5, 5);
-            this.departmentCountPanel.Size = new System.Drawing.Size(303, 89);
-            this.departmentCountPanel.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(91, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 45);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "0";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(91, 57);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(176, 17);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Total Number of Departments";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(82, 64);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(9, 111);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 25);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Departments";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(270, 116);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 17);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Search:";
-            // 
-            // txtSearchDepartment
-            // 
-            this.txtSearchDepartment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchDepartment.Location = new System.Drawing.Point(326, 108);
-            this.txtSearchDepartment.Name = "txtSearchDepartment";
-            this.txtSearchDepartment.Size = new System.Drawing.Size(163, 25);
-            this.txtSearchDepartment.TabIndex = 7;
-            this.txtSearchDepartment.TextChanged += new System.EventHandler(this.txtSearchDepartment_TextChanged);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 6;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(347, 553);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Enabled = true;
-            this.guna2Button1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.guna2Button1.Size = new System.Drawing.Size(205, 60);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "New Department";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BorderColor = System.Drawing.Color.Navy;
-            this.guna2Button3.BorderRadius = 6;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.CustomBorderColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Navy;
-            this.guna2Button3.Location = new System.Drawing.Point(558, 553);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Enabled = true;
-            this.guna2Button3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.guna2Button3.Size = new System.Drawing.Size(205, 60);
-            this.guna2Button3.TabIndex = 9;
-            this.guna2Button3.Text = "Modify Department";
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BorderRadius = 6;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(769, 553);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Enabled = true;
-            this.guna2Button4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.guna2Button4.Size = new System.Drawing.Size(205, 60);
-            this.guna2Button4.TabIndex = 10;
-            this.guna2Button4.Text = "Archive Department";
-            // 
             // guna2Elipse6
             // 
             this.guna2Elipse6.BorderRadius = 8;
             this.guna2Elipse6.TargetControl = this.departmentCountPanel;
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Main
             // 
@@ -811,13 +962,18 @@
             this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.departmentCountPanel.ResumeLayout(false);
+            this.departmentCountPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmentChart)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.departmentCountPanel.ResumeLayout(false);
-            this.departmentCountPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -882,5 +1038,16 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
+        private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private System.Windows.Forms.TextBox txtEmpNameSearch;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cmbFilterEmployeeByDepartment;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lblEmployeeTotalCount;
+        private System.Windows.Forms.LinkLabel empClearFilter;
+        private System.Windows.Forms.FlowLayoutPanel listEmployees;
     }
 }

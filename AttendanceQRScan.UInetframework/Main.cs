@@ -32,7 +32,7 @@ namespace AttendanceQRScan.UInetframework
             empFuncs = new EmployeeFuncs();
             depFuncs = new DepartmentFuncs();
             attendanceFuncs = new AttendanceFuncs();
-            imageTool = new ImageTools();            
+            imageTool = new ImageTools();
         }
 
         private void Main_New_Load(object sender, EventArgs e)
@@ -40,10 +40,14 @@ namespace AttendanceQRScan.UInetframework
             realTimeAttendanceTimer.Enabled = true;
             lblEmpCountAttendance.Text = TotalNumberOfEmployees().ToString();
 
-            LoadDepartmentForFiltering();
+            LoadDepartmentForAttendanceFiltering();
 
             FillDepartmentChart();
             DepartmentsList();
+
+            LoadEmployees();
+            LoadDepartmentForEmployeeFiltering();
+            lblEmployeeTotalCount.Text = $"Total Employees: {TotalNumberOfEmployees().ToString()}";
         }
 
         private int TotalNumberOfEmployees()
@@ -59,7 +63,7 @@ namespace AttendanceQRScan.UInetframework
 
         #region Real Time Attendance
 
-        private void LoadDepartmentForFiltering()
+        private void LoadDepartmentForAttendanceFiltering()
         {
             var departments = Departments();
             cmbAttendanceDepartment.Items.Clear();
@@ -119,8 +123,7 @@ namespace AttendanceQRScan.UInetframework
                 txtEmpNameSearchQuery.Text = "";
                 realTimeAttendanceTimer.Enabled = false;
                 FilterAttendanceByDepartment((Department)cmbAttendanceDepartment.SelectedItem);
-            }
-                
+            } 
         }
 
         private void txtEmpNameSearchQuery_TextChanged(object sender, EventArgs e)
@@ -188,6 +191,66 @@ namespace AttendanceQRScan.UInetframework
             }
             else
                 DepartmentsList();
+        }
+
+        #endregion
+
+        #region Employee Configuration
+
+        private void LoadEmployeeToList(IEnumerable<Employee> employees)
+        {
+            EmployeeDetails empDetails;
+            listEmployees.Controls.Clear();
+            foreach (var employee in employees)
+            {
+                empDetails = new EmployeeDetails(employee);
+                listEmployees.Controls.Add(empDetails);
+            }
+        }
+
+        private void LoadEmployees()
+        {
+            var employees = empFuncs.GetAllEmployees();
+            LoadEmployeeToList(employees);
+        }
+
+        private void FilterdEmployeesByDepartment(Department department)
+        {
+            var filteredEmployee = empFuncs.FilterEmployeeByDepartment(department);
+            LoadEmployeeToList(filteredEmployee);
+        }
+
+        private void cmbFilterEmployee_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbFilterEmployeeByDepartment.SelectedItem != null)
+            {
+                txtEmpNameSearch.Text = "";
+                FilterdEmployeesByDepartment((Department)cmbFilterEmployeeByDepartment.SelectedItem);
+            }
+        }
+
+        private void LoadDepartmentForEmployeeFiltering()
+        {
+            var departments = Departments();
+            cmbFilterEmployeeByDepartment.Items.Clear();
+            foreach (var department in departments)
+            {
+                cmbFilterEmployeeByDepartment.Items.Add(department);
+            }
+        }
+
+        private void txtEmpNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filteredList = empFuncs.FilterEmployeeByEmpName(txtEmpNameSearch.Text);
+            LoadEmployeeToList(filteredList);
+            cmbFilterEmployeeByDepartment.SelectedValue = null;
+        }
+
+        private void empClearFilter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtEmpNameSearch.Text = "";
+            cmbFilterEmployeeByDepartment.SelectedValue = null;
+            LoadEmployees();
         }
 
         #endregion

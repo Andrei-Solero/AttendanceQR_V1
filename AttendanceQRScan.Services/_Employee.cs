@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using System.Linq;
 
 namespace AttendanceQRScan.Services
 {
@@ -94,6 +95,66 @@ namespace AttendanceQRScan.Services
             }
 
             return employees;
+        }
+
+        public IEnumerable<Employee> GetEmployeeByDepartment(Department department)
+        {
+            var employees = GetAll();
+
+            var query = employees
+                .Where(employee => employee.Department.Name.Equals(department.Name))
+                .Select(employee => new Employee
+                {
+                    EmployeeID = employee.EmployeeID,
+                    FirstName = employee.FirstName,
+                    MiddleName = employee.MiddleName,
+                    LastName = employee.LastName,
+                    ContactNumber = employee.ContactNumber,
+                    EmailAddress = employee.EmailAddress,
+                    HomeAddress = employee.HomeAddress,
+                    EmploymentStatus = employee.EmploymentStatus,
+                    Department = new Department
+                    {
+                        DepartmentID = employee.Department.DepartmentID,
+                        Name = employee.Department.Name,
+                        WorkedHours_In = employee.Department.WorkedHours_In,
+                        WorkedHours_Out = employee.Department.WorkedHours_Out
+                    }
+                });
+
+            var filteredList = query.ToList();
+
+            return filteredList;
+        }
+
+        public IEnumerable<Employee> GetEmployeeByEmployeeName(string empNameSearchQuery)
+        {
+            var employees = GetAll();
+
+            var query = employees
+                .Where(employee => (employee.FirstName.ToLower() + " " + employee.LastName.ToLower()).Contains(empNameSearchQuery.ToLower()))
+                .Select(employee => new Employee
+                {
+                    EmployeeID = employee.EmployeeID,
+                    FirstName = employee.FirstName,
+                    MiddleName = employee.MiddleName,
+                    LastName = employee.LastName,
+                    ContactNumber = employee.ContactNumber,
+                    EmailAddress = employee.EmailAddress,
+                    HomeAddress = employee.HomeAddress,
+                    EmploymentStatus = employee.EmploymentStatus,
+                    Department = new Department
+                    {
+                        DepartmentID = employee.Department.DepartmentID,
+                        Name = employee.Department.Name,
+                        WorkedHours_In = employee.Department.WorkedHours_In,
+                        WorkedHours_Out = employee.Department.WorkedHours_Out
+                    }
+                });
+
+            var filteredList = query.ToList();
+
+            return filteredList;
         }
 
     }
