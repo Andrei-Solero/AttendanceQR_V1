@@ -66,8 +66,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchDepartment = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -83,6 +81,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.addNewEmp = new System.Windows.Forms.LinkLabel();
             this.lblEmployeeTotalCount = new System.Windows.Forms.Label();
             this.empClearFilter = new System.Windows.Forms.LinkLabel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -490,8 +489,6 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.guna2Button4);
-            this.tabPage3.Controls.Add(this.guna2Button3);
             this.tabPage3.Controls.Add(this.guna2Button1);
             this.tabPage3.Controls.Add(this.txtSearchDepartment);
             this.tabPage3.Controls.Add(this.label15);
@@ -508,47 +505,6 @@
             this.tabPage3.Text = "Departments";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 6;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(769, 553);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Enabled = true;
-            this.guna2Button4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.guna2Button4.Size = new System.Drawing.Size(205, 60);
-            this.guna2Button4.TabIndex = 10;
-            this.guna2Button4.Text = "Archive Department";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Navy;
-            this.guna2Button3.BorderRadius = 6;
-            this.guna2Button3.BorderThickness = 1;
-            this.guna2Button3.CustomBorderColor = System.Drawing.Color.MediumVioletRed;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Navy;
-            this.guna2Button3.Location = new System.Drawing.Point(558, 553);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Enabled = true;
-            this.guna2Button3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.guna2Button3.Size = new System.Drawing.Size(205, 60);
-            this.guna2Button3.TabIndex = 9;
-            this.guna2Button3.Text = "Modify Department";
-            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
@@ -560,11 +516,13 @@
             this.guna2Button1.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(347, 553);
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(795, 551);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Enabled = true;
             this.guna2Button1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 3, 5);
-            this.guna2Button1.Size = new System.Drawing.Size(205, 60);
+            this.guna2Button1.Size = new System.Drawing.Size(172, 51);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.Text = "New Department";
             // 
@@ -606,11 +564,11 @@
             this.departmentCountPanel.Controls.Add(this.label9);
             this.departmentCountPanel.Controls.Add(this.pictureBox5);
             this.departmentCountPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.departmentCountPanel.Location = new System.Drawing.Point(24, 539);
+            this.departmentCountPanel.Location = new System.Drawing.Point(512, 532);
             this.departmentCountPanel.Name = "departmentCountPanel";
             this.departmentCountPanel.ShadowDecoration.Enabled = true;
             this.departmentCountPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 5, 5);
-            this.departmentCountPanel.Size = new System.Drawing.Size(303, 89);
+            this.departmentCountPanel.Size = new System.Drawing.Size(277, 89);
             this.departmentCountPanel.TabIndex = 5;
             // 
             // label7
@@ -680,7 +638,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 5, 5);
-            this.guna2Panel1.Size = new System.Drawing.Size(486, 384);
+            this.guna2Panel1.Size = new System.Drawing.Size(486, 482);
             this.guna2Panel1.TabIndex = 2;
             // 
             // listDepartments
@@ -691,7 +649,7 @@
             this.listDepartments.Location = new System.Drawing.Point(0, 0);
             this.listDepartments.Name = "listDepartments";
             this.listDepartments.Padding = new System.Windows.Forms.Padding(4);
-            this.listDepartments.Size = new System.Drawing.Size(486, 384);
+            this.listDepartments.Size = new System.Drawing.Size(486, 482);
             this.listDepartments.TabIndex = 0;
             // 
             // panel2
@@ -730,6 +688,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.addNewEmp);
             this.tabPage4.Controls.Add(this.lblEmployeeTotalCount);
             this.tabPage4.Controls.Add(this.empClearFilter);
             this.tabPage4.Controls.Add(this.pictureBox6);
@@ -746,6 +705,19 @@
             this.tabPage4.Size = new System.Drawing.Size(1072, 604);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Employees";
+            // 
+            // addNewEmp
+            // 
+            this.addNewEmp.AutoSize = true;
+            this.addNewEmp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewEmp.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.addNewEmp.Location = new System.Drawing.Point(805, 61);
+            this.addNewEmp.Name = "addNewEmp";
+            this.addNewEmp.Size = new System.Drawing.Size(123, 17);
+            this.addNewEmp.TabIndex = 14;
+            this.addNewEmp.TabStop = true;
+            this.addNewEmp.Text = "Add New Employee";
+            this.addNewEmp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addNewEmp_LinkClicked);
             // 
             // lblEmployeeTotalCount
             // 
@@ -1034,8 +1006,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtSearchDepartment;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private System.Windows.Forms.Label label16;
@@ -1049,5 +1019,6 @@
         private System.Windows.Forms.Label lblEmployeeTotalCount;
         private System.Windows.Forms.LinkLabel empClearFilter;
         private System.Windows.Forms.FlowLayoutPanel listEmployees;
+        private System.Windows.Forms.LinkLabel addNewEmp;
     }
 }

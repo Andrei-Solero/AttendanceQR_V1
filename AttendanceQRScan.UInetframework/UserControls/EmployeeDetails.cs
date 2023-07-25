@@ -35,5 +35,11 @@ namespace AttendanceQRScan.UInetframework.UserControls
 
             empImage.Image = Image.FromFile(imageTool.LoadEmpployeeImage(employee.EmployeeID));
         }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            GenerateEmployee modifyEmployee = new GenerateEmployee(this.employee);
+            modifyEmployee.ShowDialog();
+        }
     }
 }

@@ -253,8 +253,13 @@ namespace AttendanceQRScan.UInetframework
             LoadEmployees();
         }
 
-        #endregion
+        private void addNewEmp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            GenerateEmployee newEmployee = new GenerateEmployee();
+            newEmployee.ShowDialog();
+        }
 
+        #endregion
 
     }
 }
