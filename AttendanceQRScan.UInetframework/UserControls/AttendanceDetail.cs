@@ -35,7 +35,7 @@ namespace AttendanceQRScan.UInetframework.UserControls
                     : $"In: {attendance.EmpTimeIn.ToLongTimeString()} \nOut: {attendance.EmpTimeOut.ToLongTimeString()}";
                 lblAttendanceStats.Text = attendance.InStatus;
                 lblAttendanceStats.ForeColor = attendance.InStatus == "On Time" ? Color.Green : Color.Red;
-                empImage.Image = Image.FromFile(imageTool.LoadEmpployeeImage(attendance.Employee.EmployeeID));
+                empImage.Image = Image.FromFile(imageTool.LoadEmployeeImage(attendance.Employee.EmployeeID));
             }
             catch (Exception ex)
             {

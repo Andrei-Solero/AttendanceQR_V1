@@ -20,14 +20,16 @@ namespace AttendanceQRScan.UInetframework
         EmployeeFuncs employeeFuncs;
         bool IsEdit = false;
         private readonly Employee employee;
+        private readonly Main mainForm;
         ImageTools imageTool;
 
-        public GenerateEmployee()
+        public GenerateEmployee(Main mainForm)
         {
             InitializeComponent();
             departmentFuncs = new DepartmentFuncs();
             employeeFuncs = new EmployeeFuncs();
             imageTool = new ImageTools();
+            this.mainForm = mainForm;
         }
 
         /// <summary>
@@ -47,19 +49,26 @@ namespace AttendanceQRScan.UInetframework
 
         private void btnSaveEmployee_Click(object sender, EventArgs e)
         {
-            Employee emp = new Employee
+            if (IsEdit == true)
             {
-                Department = (Department)cmbDepartment.SelectedItem,
-                FirstName = txtFirstname.Text,
-                MiddleName = txtMiddlename.Text,
-                LastName = txtLastname.Text,
-                ContactNumber = txtContactNumber.Text,
-                EmailAddress = txtEmail.Text,
-                HomeAddress = txtHomeAddress.Text,
-            };
+                // TODO: continues this
+            }
+            else
+            {
+                Employee emp = new Employee
+                {
+                    Department = (Department)cmbDepartment.SelectedItem,
+                    FirstName = txtFirstname.Text,
+                    MiddleName = txtMiddlename.Text,
+                    LastName = txtLastname.Text,
+                    ContactNumber = txtContactNumber.Text,
+                    EmailAddress = txtEmail.Text,
+                    HomeAddress = txtHomeAddress.Text,
+                };
 
-            Bitmap qrCode = employeeFuncs.GenerateEmployee_QR(emp, (Bitmap)empImage.Image);
-            empQRCode.Image = qrCode;
+                Bitmap qrCode = employeeFuncs.GenerateEmployee_QR(emp, (Bitmap)empImage.Image);
+                empQRCode.Image = qrCode;
+            }
         }
 
         private void GenerateEmployee_Load(object sender, EventArgs e)
@@ -72,20 +81,20 @@ namespace AttendanceQRScan.UInetframework
                 cmbDepartment.Items.Add(department);
             }
 
-            switch (IsEdit)
+            if (IsEdit == true)
             {
-                case true:
-                    txtFirstname.Text = employee.FirstName;
-                    txtMiddlename.Text = employee.MiddleName;
-                    txtLastname.Text = employee.LastName;
-                    cmbDepartment.Text = employee.Department.ToString();
-                    txtEmail.Text = employee.EmailAddress;
-                    txtContactNumber.Text = employee.ContactNumber;
-                    txtHomeAddress.Text = employee.HomeAddress;
-                    empImage.Image = Image.FromFile(imageTool.LoadEmpployeeImage(employee.EmployeeID));
-                    break;
-            }
+                txtFirstname.Text = employee.FirstName;
+                txtMiddlename.Text = employee.MiddleName;
+                txtLastname.Text = employee.LastName;
+                cmbDepartment.Text = employee.Department.ToString();
+                txtEmail.Text = employee.EmailAddress;
+                txtContactNumber.Text = employee.ContactNumber;
+                txtHomeAddress.Text = employee.HomeAddress;
+                empImage.Image = Image.FromFile(imageTool.LoadEmployeeImage(employee.EmployeeID));
+                empQRCode.Image = Image.FromFile(imageTool.LoadEmployeeQRImage(employee.EmployeeID));
 
+                btnDeactivate.Visible = true;
+            }
         }
 
         private void btnBrowseImage_Click(object sender, EventArgs e)
@@ -105,15 +114,16 @@ namespace AttendanceQRScan.UInetframework
                 this.Close();
         }
 
-        //private void btnAddDepartment_Click(object sender, EventArgs e)
-        //{
-        //    GenerateDepartment department = new GenerateDepartment();
-        //    department.ShowDialog();
-        //}
+        private void btnDeactivate_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Are you sure to deactivate the employment status of this employee?\n\n" +
+                "Note: Deactivating employee's employment status will result into his/her attendance will not be accepted by the system.", "Deactivating Employee", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-        //private void btnRefresh_Click(object sender, EventArgs e)
-        //{
-        //    GenerateEmployee_Load(sender, e);
-        //}
+            if (dialog == DialogResult.Yes)
+            {
+                employeeFuncs.DeactivateEmployee(this.employee);
+                this.Close();
+            }
+        }
     }
 }

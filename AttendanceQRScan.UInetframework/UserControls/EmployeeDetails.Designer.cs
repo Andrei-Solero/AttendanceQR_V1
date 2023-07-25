@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDetails));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnViewQR = new Guna.UI2.WinForms.Guna2Button();
             this.lblHomeAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
@@ -46,9 +47,10 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.empImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.employmentStatus = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -59,7 +61,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.employmentStatus);
+            this.guna2Panel1.Controls.Add(this.btnViewQR);
             this.guna2Panel1.Controls.Add(this.lblHomeAddress);
             this.guna2Panel1.Controls.Add(this.lblEmail);
             this.guna2Panel1.Controls.Add(this.lblContact);
@@ -80,6 +83,27 @@
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 3, 5);
             this.guna2Panel1.Size = new System.Drawing.Size(285, 428);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnViewQR
+            // 
+            this.btnViewQR.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewQR.BorderRadius = 4;
+            this.btnViewQR.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewQR.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewQR.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewQR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewQR.FillColor = System.Drawing.Color.DimGray;
+            this.btnViewQR.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnViewQR.ForeColor = System.Drawing.Color.White;
+            this.btnViewQR.Image = ((System.Drawing.Image)(resources.GetObject("btnViewQR.Image")));
+            this.btnViewQR.Location = new System.Drawing.Point(64, 387);
+            this.btnViewQR.Name = "btnViewQR";
+            this.btnViewQR.ShadowDecoration.Enabled = true;
+            this.btnViewQR.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 3, 3);
+            this.btnViewQR.Size = new System.Drawing.Size(156, 29);
+            this.btnViewQR.TabIndex = 14;
+            this.btnViewQR.Text = "View QR Code";
+            this.btnViewQR.Click += new System.EventHandler(this.btnViewQR_Click);
             // 
             // lblHomeAddress
             // 
@@ -242,25 +266,14 @@
             this.empImage.TabIndex = 0;
             this.empImage.TabStop = false;
             // 
-            // guna2Button1
+            // employmentStatus
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 4;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.Location = new System.Drawing.Point(64, 387);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Enabled = true;
-            this.guna2Button1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(1, 1, 3, 3);
-            this.guna2Button1.Size = new System.Drawing.Size(156, 29);
-            this.guna2Button1.TabIndex = 14;
-            this.guna2Button1.Text = "View QR Code";
+            this.employmentStatus.Location = new System.Drawing.Point(8, 92);
+            this.employmentStatus.Name = "employmentStatus";
+            this.employmentStatus.Size = new System.Drawing.Size(31, 28);
+            this.employmentStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employmentStatus.TabIndex = 15;
+            this.employmentStatus.TabStop = false;
             // 
             // EmployeeDetails
             // 
@@ -275,6 +288,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,6 +311,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnViewQR;
+        private System.Windows.Forms.PictureBox employmentStatus;
     }
 }

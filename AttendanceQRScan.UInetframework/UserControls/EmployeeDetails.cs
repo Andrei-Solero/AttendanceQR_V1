@@ -33,13 +33,23 @@ namespace AttendanceQRScan.UInetframework.UserControls
             lblEmail.Text = employee.EmailAddress;
             lblHomeAddress.Text = employee.HomeAddress;
 
-            empImage.Image = Image.FromFile(imageTool.LoadEmpployeeImage(employee.EmployeeID));
+            empImage.Image = Image.FromFile(imageTool.LoadEmployeeImage(employee.EmployeeID));
+
+            employmentStatus.Image =
+                employee.EmploymentStatus == "Active" ? Properties.Resources.round
+                : Properties.Resources.circle;
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
             GenerateEmployee modifyEmployee = new GenerateEmployee(this.employee);
             modifyEmployee.ShowDialog();
+        }
+
+        private void btnViewQR_Click(object sender, EventArgs e)
+        {
+            QRCodeView qrView = new QRCodeView(employee.EmployeeID);
+            qrView.ShowDialog();
         }
     }
 }

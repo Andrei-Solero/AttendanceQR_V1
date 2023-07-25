@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateEmployee));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeactivate = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.empQRCode = new System.Windows.Forms.PictureBox();
             this.btnBrowseImage = new Guna.UI2.WinForms.Guna2Button();
@@ -39,23 +41,22 @@
             this.btnDiscard = new Guna.UI2.WinForms.Guna2Button();
             this.btnSaveEmployee = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtHomeAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtContactNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbDepartment = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMiddlename = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empQRCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empImage)).BeginInit();
@@ -67,6 +68,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnDeactivate);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.empQRCode);
@@ -77,6 +79,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(251, 625);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.BorderRadius = 4;
+            this.btnDeactivate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeactivate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeactivate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeactivate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeactivate.FillColor = System.Drawing.Color.Red;
+            this.btnDeactivate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeactivate.ForeColor = System.Drawing.Color.White;
+            this.btnDeactivate.Image = ((System.Drawing.Image)(resources.GetObject("btnDeactivate.Image")));
+            this.btnDeactivate.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnDeactivate.Location = new System.Drawing.Point(11, 575);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(229, 38);
+            this.btnDeactivate.TabIndex = 11;
+            this.btnDeactivate.Text = "Deactivate Employment Status";
+            this.btnDeactivate.Visible = false;
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Blue;
+            this.panel3.Location = new System.Drawing.Point(5, 311);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(240, 2);
+            this.panel3.TabIndex = 8;
             // 
             // label1
             // 
@@ -196,6 +226,33 @@
             this.guna2GroupBox2.TabIndex = 9;
             this.guna2GroupBox2.Text = "Employee\'s Contact";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(10, 163);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 17);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Home Address";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 17);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Contact Number";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Email Address";
+            // 
             // txtHomeAddress
             // 
             this.txtHomeAddress.BorderColor = System.Drawing.Color.Silver;
@@ -291,6 +348,33 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(339, 279);
             this.guna2GroupBox1.TabIndex = 8;
             this.guna2GroupBox1.Text = "Employee\'s Information & Department";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Last Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Middle Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 17);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "First Name";
             // 
             // label2
             // 
@@ -398,68 +482,6 @@
             // 
             this.guna2Elipse1.TargetControl = this.empQRCode;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 17);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "First Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Middle Name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 163);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 17);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Last Name";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 17);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Email Address";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 17);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Contact Number";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(10, 163);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 17);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Home Address";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Blue;
-            this.panel3.Location = new System.Drawing.Point(5, 311);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(240, 2);
-            this.panel3.TabIndex = 8;
-            // 
             // GenerateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,6 +536,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2Button btnDeactivate;
     }
 }
 

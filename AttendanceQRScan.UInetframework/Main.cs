@@ -208,7 +208,7 @@ namespace AttendanceQRScan.UInetframework
             }
         }
 
-        private void LoadEmployees()
+        public void LoadEmployees()
         {
             var employees = empFuncs.GetAllEmployees();
             LoadEmployeeToList(employees);
@@ -255,7 +255,7 @@ namespace AttendanceQRScan.UInetframework
 
         private void addNewEmp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            GenerateEmployee newEmployee = new GenerateEmployee();
+            GenerateEmployee newEmployee = new GenerateEmployee(this);
             newEmployee.ShowDialog();
         }
 

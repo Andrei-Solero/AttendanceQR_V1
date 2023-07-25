@@ -29,6 +29,15 @@ namespace AttendanceQRScan.Services
             repo.ModifyData();
         }
 
+        public void DeactivateEmploymentStatus(Employee emp)
+        {
+            string spName = "SPEmployeeDeactivate";
+            repo = new Repository_ADONET(spName);
+            repo.Parameter_Value.Add(("@EmployeeID", emp.EmployeeID, SqlDbType.VarChar));
+
+            repo.ModifyData();
+        }
+
         public Employee GetEmployeeByID(string empID)
         {
             Employee emp = null;

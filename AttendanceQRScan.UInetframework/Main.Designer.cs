@@ -102,6 +102,10 @@
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.employmentStatus = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.materialTabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.attendedPanel.SuspendLayout();
@@ -123,6 +127,8 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -688,6 +694,10 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.label20);
+            this.tabPage4.Controls.Add(this.pictureBox7);
+            this.tabPage4.Controls.Add(this.label19);
+            this.tabPage4.Controls.Add(this.employmentStatus);
             this.tabPage4.Controls.Add(this.addNewEmp);
             this.tabPage4.Controls.Add(this.lblEmployeeTotalCount);
             this.tabPage4.Controls.Add(this.empClearFilter);
@@ -823,7 +833,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(125, 32);
+            this.label16.Location = new System.Drawing.Point(125, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(125, 23);
             this.label16.TabIndex = 1;
@@ -893,6 +903,46 @@
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // employmentStatus
+            // 
+            this.employmentStatus.Image = global::AttendanceQRScan.UInetframework.Properties.Resources.round;
+            this.employmentStatus.Location = new System.Drawing.Point(125, 50);
+            this.employmentStatus.Name = "employmentStatus";
+            this.employmentStatus.Size = new System.Drawing.Size(31, 28);
+            this.employmentStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employmentStatus.TabIndex = 16;
+            this.employmentStatus.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(156, 57);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(103, 15);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "- Active Employee";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(296, 57);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(132, 15);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "- Deactivated Employee";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::AttendanceQRScan.UInetframework.Properties.Resources.circle;
+            this.pictureBox7.Location = new System.Drawing.Point(265, 50);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 18;
+            this.pictureBox7.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -946,6 +996,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employmentStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1020,5 +1072,9 @@
         private System.Windows.Forms.LinkLabel empClearFilter;
         private System.Windows.Forms.FlowLayoutPanel listEmployees;
         private System.Windows.Forms.LinkLabel addNewEmp;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox employmentStatus;
     }
 }

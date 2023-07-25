@@ -32,9 +32,14 @@ namespace AttendanceQRScan.Helper
             image.Save(filePath);
         }
 
-        public string LoadEmpployeeImage(string empID)
+        public string LoadEmployeeImage(string empID)
         {
             return Path.Combine(LocalDirDocuments, "Attendance Management System QR", "Employee Images", $"{empID}.jpg");
+        }
+
+        public string LoadEmployeeQRImage(string qrID)
+        {
+            return Path.Combine(LocalDirDocuments, "Attendance Management System QR", "Employee QR Codes", $"{qrID}.jpg");
         }
 
     }
