@@ -203,7 +203,7 @@ namespace AttendanceQRScan.UInetframework
             listEmployees.Controls.Clear();
             foreach (var employee in employees)
             {
-                empDetails = new EmployeeDetails(employee);
+                empDetails = new EmployeeDetails(employee, this);
                 listEmployees.Controls.Add(empDetails);
             }
         }

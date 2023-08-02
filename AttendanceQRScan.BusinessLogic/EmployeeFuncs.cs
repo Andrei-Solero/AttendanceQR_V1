@@ -48,6 +48,11 @@ namespace AttendanceQRScan.BusinessLogic
             employeeService.DeactivateEmploymentStatus(emp);
         }
 
+        public void DeleteEmployee(Employee emp)
+        {
+            employeeService.DeleteEmployee(emp);
+        }
+
         public Employee GetEmployeeByID(string empID)
         {
             return employeeService.GetEmployeeByID(empID);

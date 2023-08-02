@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDetails));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.employmentStatus = new System.Windows.Forms.PictureBox();
             this.btnViewQR = new Guna.UI2.WinForms.Guna2Button();
             this.lblHomeAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -47,10 +48,9 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.empImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.employmentStatus = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employmentStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empImage)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -83,6 +83,15 @@
             this.guna2Panel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 3, 5);
             this.guna2Panel1.Size = new System.Drawing.Size(285, 428);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // employmentStatus
+            // 
+            this.employmentStatus.Location = new System.Drawing.Point(8, 92);
+            this.employmentStatus.Name = "employmentStatus";
+            this.employmentStatus.Size = new System.Drawing.Size(31, 28);
+            this.employmentStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.employmentStatus.TabIndex = 15;
+            this.employmentStatus.TabStop = false;
             // 
             // btnViewQR
             // 
@@ -235,6 +244,7 @@
             this.btnDelete.Size = new System.Drawing.Size(26, 30);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnModify
             // 
@@ -266,15 +276,6 @@
             this.empImage.TabIndex = 0;
             this.empImage.TabStop = false;
             // 
-            // employmentStatus
-            // 
-            this.employmentStatus.Location = new System.Drawing.Point(8, 92);
-            this.employmentStatus.Name = "employmentStatus";
-            this.employmentStatus.Size = new System.Drawing.Size(31, 28);
-            this.employmentStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.employmentStatus.TabIndex = 15;
-            this.employmentStatus.TabStop = false;
-            // 
             // EmployeeDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,8 +288,8 @@
             this.Load += new System.EventHandler(this.EmployeeDetails_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employmentStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empImage)).EndInit();
             this.ResumeLayout(false);
 
         }
