@@ -38,6 +38,11 @@ namespace AttendanceQRScan.BusinessLogic
             return qrCodeImage;
         }
 
+        public void UpdateEmployee(Employee emp)
+        {
+            employeeService.Modify(emp);
+        }
+
         public void DeactivateEmployee(Employee emp)
         {
             employeeService.DeactivateEmploymentStatus(emp);

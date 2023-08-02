@@ -51,7 +51,19 @@ namespace AttendanceQRScan.UInetframework
         {
             if (IsEdit == true)
             {
-                // TODO: continues this
+                Employee emp = new Employee
+                {
+                    EmployeeID = this.employee.EmployeeID,
+                    Department = (Department)cmbDepartment.SelectedItem,
+                    FirstName = txtFirstname.Text,
+                    MiddleName = txtMiddlename.Text,
+                    LastName = txtLastname.Text,
+                    ContactNumber = txtContactNumber.Text,
+                    EmailAddress = txtEmail.Text,
+                    HomeAddress = txtHomeAddress.Text,
+                };
+
+                employeeFuncs.UpdateEmployee(emp);
             }
             else
             {
